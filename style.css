@@ -11,6 +11,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  font-size: 21px;
 }
 
 a {
@@ -27,11 +28,32 @@ img {
   margin: 0 auto;
 }
 
+header {
+  background-color: #136c72;
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.nav__item {
+  margin-right: 1rem;
+  padding: 1rem 0;
+}
+
+.nav__link {
+  color: white;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
 .intro {
   background: #23424a;
   color: white;
   padding: 50px 0;
-  font-size: 21px;
 }
 
 .intro .container {
@@ -51,7 +73,8 @@ img {
   margin-bottom: 3rem;
 }
 
-.cta {
+.cta,
+.nav__btn {
   display: inline-block;
   text-transform: uppercase;
   color: #072a2d;
@@ -59,6 +82,10 @@ img {
   padding: 0.7rem 2rem;
   background-color: #38cfd9;
   border-radius: 31.5px;
+}
+
+.nav__btn {
+  display: inline;
 }
 
 .cta:hover,
@@ -72,7 +99,6 @@ img {
 
 .main {
   padding: 50px 0;
-  font-size: 21px;
 }
 .main h2 {
   font-size: 36px;
