@@ -127,3 +127,131 @@ header {
   color: white;
   width: 30%;
 }
+
+/*! adding responsive ness 
+
+  when to use media querry 
+ans : you ask this question - when does my layout start to fail at one point
+does it just not work anymore ? and do i need to fix it ? 
+how do i figure it out by looking at my layout and playing with my layout.
+
+dont use a lot of media querrys so its not about each section of the site being perfect because nodboy goes like this except for you and me. 
+the more you have, the harder things are going to be to maintain. so try and get a general idea of where things are on your site that are breaking and try and build, break poinst around those.
+you should be tring to use the minimum amound of break points that you need to be able to have a nice lookin and functional layout.
+
+
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
+Use 600px, 900px, 1200px, and 1800px if you plan on giving the giant-monitor people something special. 
+*/
+
+/* @media (max-width: 700px) {
+  .intro {
+    background-color: bisque;
+  }
+} */
+
+@media (min-width: 700px) {
+  .hamburger {
+    display: none;
+  }
+
+  header {
+    background-color: #136c72;
+  }
+
+  .nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+
+  .nav__item {
+    margin-right: 1rem;
+    padding: 1rem 0;
+  }
+
+  .nav__link {
+    color: white;
+    text-transform: capitalize;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 700px) {
+  nav {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    display: none;
+  }
+
+  .ham {
+    display: flex;
+    justify-content: flex-end;
+  }
+  header {
+    background-color: #136c72;
+  }
+
+  .hamburger {
+    display: flex;
+    justify-content: space-between;
+  }
+  .ham,
+  .close {
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  .close {
+    display: none;
+  }
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  .intro .container {
+    flex-direction: column;
+  }
+
+  .intro__content {
+    width: 100%;
+  }
+
+  .intro__img {
+    width: 100%;
+    text-align: center;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+  .col {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta {
+    margin-bottom: 2rem;
+  }
+}
